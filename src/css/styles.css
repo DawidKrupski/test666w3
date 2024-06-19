@@ -1,0 +1,466 @@
+@import url('./reset.css');
+@import url('./header.css');
+@import url('./contacts.css');
+@import url('./footer.css');
+@import url('./fruits.css');
+@import url('./hero.css');
+@import url('./how-it-works.css');
+@import url('./pop-up-thank-you.css');
+@import url('./pop-up-your-order.css');
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: var(--white);
+  background-color: var(--red);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --black: #000000;
+  --white: #ffffff;
+  --red: #ae1332;
+  --green: #a4cb66;
+  --yellow: #f5ce13;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/dm-sans-v15-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url('../fonts/dm-sans-v15-latin-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--white);
+  background-color: var(--red);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 64px;
+  letter-spacing: -0.04em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* AUXILIARY CLASSES --------------------------------------------------------- */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  max-width: 1280px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    max-width: 768px;
+  }
+
+  /*footer responsywnosc tablet*/
+
+  .footer {
+    height: 395px;
+  }
+
+  .footer_image_and_menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .footer_image_and_logo {
+    min-width: 349px;
+  }
+
+  .footer_menu {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .footer_social_media_and_address {
+    margin-left: 171px;
+  }
+
+  /*footer responsywnosc tablet*/
+
+  /*how it works responsywnosc tablet*/
+
+  .how-it-works_steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .how-it-works_gif {
+    width: 704px;
+  }
+  /*how it works responsywnosc tablet*/
+
+  /*organic fruits responsywnosc tablet*/
+  .fruit-section-title-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .fruit-section-title {
+    font-size: 40px;
+  }
+
+  .section-title-text {
+    width: 547px;
+  }
+
+  .kiwi-visible {
+    display: none;
+  }
+  /*organic fruits responsywnosc tablet*/
+
+  /*organic fruits responsywnosc tablet*/
+
+  .contacts_heading {
+    font-size: 54px;
+  }
+
+  .fresh-box-img {
+    width: 344px;
+    height: 480px;
+    padding: 8px;
+  }
+
+  .contacts_images {
+    display: none;
+  }
+
+  .contacts_images_tablet {
+    display: block;
+  }
+
+  .contacts_images_tablet_img {
+    width: 344px;
+    height: 480px;
+  }
+
+  .fresh-box-tablet {
+    gap: 16px;
+  }
+
+  .text {
+    width: 489px;
+  }
+  /*organic fruits responsywnosc tablet*/
+
+  /*hero responsywnosc tablet*/
+  .hero_heading {
+    max-width: 704px;
+    max-height: 168px;
+    font-size: 50px;
+    line-height: 54px;
+  }
+
+  .hero_two-pills {
+    gap: 158px;
+    margin-top: 600px;
+  }
+
+  .hero_strawberries_container {
+    margin-top: 70px;
+  }
+
+  .hero_blurred-bananas {
+    left: 0;
+  }
+  /*hero responsywnosc tablet*/
+
+  /*modal-order responsywnosc tablet*/
+  .modal-order_content {
+    width: 768px;
+    padding: 0;
+  }
+
+  .close-button {
+    right: 20px;
+  }
+
+  .modal-order_content {
+    background-position: right -157px bottom;
+  }
+
+  .modal-order-form {
+    margin: 0 40px;
+  }
+  /*modal-order responsywnosc tablet*/
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 375px;
+  }
+
+  /*footer responsywnosc mobile*/
+
+  .footer {
+    height: 546px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer_image_and_menu {
+    flex-direction: column;
+    align-items: center;
+    max-width: 375px;
+    height: 210px;
+    margin-bottom: 44px;
+  }
+
+  .footer_image {
+    width: 335px;
+  }
+
+  .footer_image_and_logo {
+    padding: 0;
+  }
+
+  .footer_menu {
+    margin: 0;
+    margin-top: 24px;
+    margin-bottom: 44px;
+  }
+
+  .footer_contacts-list_margin {
+    margin-bottom: 14px;
+    max-width: 180px;
+  }
+
+  .footer_contacts-list {
+    text-align: center;
+  }
+
+  /*footer responsywnosc mobile*/
+
+  /*how it works responsywnosc mobile*/
+
+  .section_how-it-works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0;
+  }
+
+  .how-it-works {
+    width: 335px;
+  }
+
+  .how-it-works_heading {
+    font-size: 28px;
+  }
+
+  .how-it-works_steps {
+    flex-direction: column;
+    align-items: center;
+    width: 335px;
+  }
+
+  .how-it-works_step {
+    width: 295px;
+    padding: 20px;
+  }
+
+  .how-it-works_gif {
+    width: 335px;
+  }
+  /*how it works responsywnosc mobile*/
+
+  /*header responsywnosc mobile*/
+  .menu {
+    display: none;
+  }
+
+  .logo_pack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topline_uil-cart {
+    display: none;
+  }
+
+  .topline_uil-cart_mobile {
+    width: 108px;
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  /*header responsywnosc mobile*/
+
+  /*header mobile responzywnosc*/
+  .header-mobile-nav {
+    display: block;
+  }
+
+  /*organic fruits responsywnosc mobile*/
+  .fruit-visible {
+    display: none;
+  }
+
+  .order-button {
+    width: 80px;
+    height: 80px;
+  }
+  /*organic fruits responsywnosc mobile*/
+
+  /*contacts responsywnosc mobile*/
+
+  .contacts_section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 40px;
+  }
+  .contacts_heading {
+    width: 335px;
+    font-size: 32px;
+    left: 20px;
+    padding-top: 37px;
+  }
+
+  .contacts_images {
+    display: none;
+  }
+
+  .contacts_images_mobile {
+    display: block;
+  }
+
+  .text {
+    display: none;
+  }
+
+  .contact_form {
+    display: none;
+  }
+  /*contacts responsywnosc mobile*/
+
+  /*hero responsywnosc mobile*/
+  .hero_heading {
+    max-width: 335px;
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .hero_two-pills {
+    gap: 0;
+    flex-direction: column;
+    margin-top: 280px;
+    align-items: center;
+  }
+
+  .hero_redhead {
+    width: 311px;
+    height: 484px;
+  }
+
+  .hero_strawberries_container {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: 0;
+  }
+
+  .hero-strawberries_hashtags {
+    justify-content: center;
+  }
+
+  .hero-strawberries_hashtags_list {
+    width: 125px;
+  }
+
+  .hero_watermelon_container {
+    margin: 0;
+  }
+  /*hero responsywnosc mobile*/
+
+  /*modal-order responsywnosc mobile*/
+  .modal-order {
+    width: 375px;
+  }
+
+  .modal-order_content_header {
+    font-size: 28px;
+    line-height: 28px;
+    margin: 20px;
+  }
+
+  .close-button {
+    top: 20px;
+    right: 20px;
+  }
+
+  .modal-order_content {
+    width: 375px;
+    background-image: none;
+    padding: 0;
+  }
+
+  .modal-order_content_cards {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .card {
+    width: 295px;
+    height: 119px;
+  }
+
+  .modal-order-input {
+    width: 295px;
+    padding: 15px 18px;
+    margin: 7px 20px;
+  }
+  /*modal-order responsywnosc mobile*/
+}
